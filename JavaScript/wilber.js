@@ -3,9 +3,10 @@ const botonBuscar = document.getElementById('searchBtn');
 const contenedor1 = document.getElementById('results1');
 const contenedor2 = document.getElementById('results2');
 
+const apikey = fdeb64cc5ff166e4c008909a73291cb0 ;
 // Función para obtener imágenes desde Unsplash
 async function obtenerImagenes(consulta) {
-    const respuesta = await fetch(`https://api.unsplash.com/search/photos?query=${consulta}&client_id=https://dog.ceo/api/breeds/image/random`);
+    const respuesta = await fetch(`https://api.unsplash.com/search/photos?query=${consulta}&client_id=apikey`);
     const datos = await respuesta.json();
     return datos.results; // Retorna las imágenes encontradas
 }
