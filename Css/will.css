@@ -1,0 +1,110 @@
+/* Reset básico para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    background: #4BD095;
+    color: white;
+    padding: 1rem;
+}
+
+/* Barra de navegación */
+nav {
+    background: #444;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.search-container input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    background: white;
+    border: 2px solid #4eb1e3;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Contenedor principal */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Secciones de resultados */
+section {
+    width: 45%;
+    min-height: 60vh;
+    background: darkgray;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Pie de página */
+footer {
+    background: #4BD095;
+    color: white;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+/* Botones generales */
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background: white;
+    color: #333;
+    border: 2px solid #4eb1e3;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Imágenes de resultados */
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
