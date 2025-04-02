@@ -1,0 +1,65 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor de los usuarios */
+#usersList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Tarjetas de usuario */
+.user-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 180px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.user-card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen de usuario */
+.user-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    margin-bottom: 10px;
+}
+
+/* Nombre del usuario */
+.user-name {
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* País del usuario */
+.user-country {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Barra de búsqueda */
+#searchInput {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
