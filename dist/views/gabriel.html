@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/styles.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md shadow-md py-4 z-10">
+        <!-- Barra de navegacion -->
+        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+            <!-- Logo y nombe-->
+            <a href="/dist/index.html" class="flex items-center gap-2">
+                <img class="h-9 w-9 border-none rounded-full cursor-pointer" src="/images/Subtítulo.png" alt="...">
+                <p class="text-[22px] font-bold">Orizzonter</p>
+            </a>
+            
+            <!-- Menu de navegacion -->
+            <div
+                class="nav-links textNav">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                  <li><a class="list" href="dan.html">Usuarios</a></li>
+                  <li><a class="list" href="gabriel.html">Estadísticas</a></li>
+                  <li><a class="list" href="andres.html">Clima</a></li>
+                  <li><a class="list" href="will.html">Rutas</a></li>
+                  <li><a class="list" href="map.html">Map</a></li>
+                </ul>
+            </div>
+            <!-- Sing in -->
+            <div class="flex items-center gap-6">
+                <a href="login.html">
+                    <button class="singin-btn">
+                    <span class="absolute inset-0 bg-white opacity-10 rounded-full transition-all duration-300 group-hover:opacity-20"></span>
+                    Sign in
+                    </button>
+                </a>
+                <!-- Funcion navbar responsive -->
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="text-9xl font-bold mt-24">Gabriel no ha hecho nada aajajajaaj</h1>
+</body>
+</html>

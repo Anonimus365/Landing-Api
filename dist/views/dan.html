@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Perfiles</title>
+  <link href="/dist/styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <header class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md shadow-md py-4 z-10">
+    <!-- Barra de navegacion -->
+    <nav class="flex justify-between items-center w-[92%]  mx-auto">
+        <!-- Logo y nombe-->
+        <a href="/dist/index.html" class="flex items-center gap-2">
+            <img class="h-9 w-9 border-none rounded-full cursor-pointer" src="/images/Subtítulo.png" alt="...">
+            <p class="text-[22px] font-bold">Orizzonter</p>
+        </a>
+        
+        <!-- Menu de navegacion -->
+        <div
+            class="nav-links textNav">
+            <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+              <li><a class="list" href="dan.html">Usuarios</a></li>
+              <li><a class="list" href="gabriel.html">Estadísticas</a></li>
+              <li><a class="list" href="andres.html">Clima</a></li>
+              <li><a class="list" href="will.html">Rutas</a></li>
+              <li><a class="list" href="map.html">Map</a></li>
+            </ul>
+        </div>
+        <!-- Sing in -->
+        <div class="flex items-center gap-6">
+            <a href="login.html">
+                <button class="singin-btn">
+                <span class="absolute inset-0 bg-white opacity-10 rounded-full transition-all duration-300 group-hover:opacity-20"></span>
+                Sign in
+                </button>
+            </a>
+            <!-- Funcion navbar responsive -->
+            <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+        </div>
+    </nav>
+</header>
+
+  <div class="mt-24 container mx-auto p-4">
+    <h1 class="text-4xl font-bold text-center mb-10">Buscador de Perfiles</h1>
+
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Buscar por nombre o email..." 
+      class="w-full p-3 mb-6 border rounded shadow focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+
+    <div id="userList" class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-11/12 max-w-md relative animate-fade-in">
+      <button id="closeModal" class="absolute top-2 right-3 text-gray-500 hover:text-gray-800">✖</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="/dist/JavaScript/dan.js"></script>
+</body>
+</html>
