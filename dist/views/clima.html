@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/styles.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md shadow-md py-4 z-10">
+        <!-- Barra de navegacion -->
+        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+            <!-- Logo y nombe-->
+            <a href="/dist/index.html" class="flex items-center gap-2">
+                <img class="h-9 w-9 border-none rounded-full cursor-pointer" src="/images/Subtítulo.png" alt="...">
+                <p class="text-[22px] font-bold">Orizzonter</p>
+            </a>
+            
+            <!-- Menu de navegacion -->
+            <div
+                class="nav-links textNav">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                  <li><a class="list" href="dan.html">Usuarios</a></li>
+                  <li><a class="list" href="gabriel.html">Estadísticas</a></li>
+                  <li><a class="list" href="clima.html">Clima</a></li>
+                  <li><a class="list" href="will.html">Rutas</a></li>
+                  <li><a class="list" href="rcamilo.html">Map</a></li>
+                </ul>
+            </div>
+            <!-- Sing in -->
+            <div class="flex items-center gap-6">
+                <a href="login.html">
+                    <button class="singin-btn">
+                    <span class="absolute inset-0 bg-white opacity-10 rounded-full transition-all duration-300 group-hover:opacity-20"></span>
+                    Sign in
+                    </button>
+                </a>
+                <!-- Funcion navbar responsive -->
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <div class="max-w-3xl mx-auto mt-36 p-6 bg-white shadow-2xl rounded-3xl border border-gray-200 space-y-8 font-sans">
+        <!-- Sección principal del clima -->
+        <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+          <!-- Icono y temperatura -->
+          <div class="flex flex-col items-center text-center md:text-left">
+            <img id="weather-icon" src="" alt="Clima" class="w-24 h-24" />
+            <h3 id="city" class="text-2xl font-bold text-gray-800 mt-2">Ciudad</h3>
+            <p id="description" class="text-lg capitalize text-gray-500">Condición</p>
+          </div>
+      
+          <!-- Detalles -->
+          <div class="flex-1 space-y-2 text-gray-700">
+            <p class="text-4xl font-extrabold text-orange-500" id="temperature">--°C</p>
+            <div class="grid grid-cols-2 gap-4 text-sm text-gray-600">
+              <p><span class="font-semibold">💧 Humedad:</span> <span id="humidity">--%</span></p>
+              <p><span class="font-semibold">💨 Viento:</span> <span id="wind">-- km/h</span></p>
+            </div>
+            <p id="advice" class="mt-2 text-green-600 font-semibold text-base bg-green-50 p-2 rounded-lg">
+              Consejo para ciclistas
+            </p>
+          </div>
+        </div>
+      
+        <!-- Pronóstico por horas -->
+        <div>
+          <h4 class="text-lg font-bold text-gray-700 mb-2">🕒 Pronóstico por horas</h4>
+          <div id="forecast" class="grid grid-cols-3 sm:grid-cols-6 gap-4 text-center text-sm">
+            <!-- Aquí se insertan los datos con JS -->
+          </div>
+        </div>
+      
+        <!-- Mapa -->
+        <div class="space-y-2">
+          <h4 class="text-lg font-bold text-gray-700">📍 Tu ubicación en el mapa</h4>
+          <div id="map" class="h-64 w-full rounded-xl overflow-hidden border border-gray-300 shadow"></div>
+        </div>
+      </div>      
+      
+    <script src="/dist/JavaScript/clima.js"></script>
+</body>
+</html>
